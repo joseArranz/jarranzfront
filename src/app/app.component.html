@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -18,4 +18,24 @@
   </li>
 </ul>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<div>
+  <app-navbar></app-navbar>
+</div>
+<div class="ui-g">
+    <div class="ui-g-12 ui-md-2"><app-menu-general ></app-menu-general></div>
+    <div class="ui-g-12 ui-md-10 ui-g-nopad">
+        <div class="ui-g-12">
+            <!-- CABECERA -->            
+        </div>
+        <div class="ui-g-12 ui-g-nopad">
+            <!-- CUERPO -->
+            <div class="container">  
+                <router-outlet> </router-outlet>
+            </div>
+        </div>
+    </div>
+    <div class="ui-g-12">
+        <!-- FOOTER -->
+    </div>
+</div>
