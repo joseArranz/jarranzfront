@@ -8,11 +8,28 @@ import { MenuGeneralComponent } from "./components/common/menu-general/menu-gene
 import { UserService } from "./service/user.service";
 import { HttpWrapper } from "./service/httpWrapper.service";
 import { HttpClientModule } from "@angular/common/http";
-import { InitComponent } from './components/common/init/init.component';
-
+import { InitComponent } from "./components/common/init/init.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {
+  MatInputModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule
+} from "@angular/material";
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, MenuGeneralComponent, InitComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    MenuGeneralComponent,
+    InitComponent
+  ],
+  imports: [
+    /* BrowserModule, */
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
   providers: [UserService, HttpWrapper],
   bootstrap: [AppComponent]
 })
