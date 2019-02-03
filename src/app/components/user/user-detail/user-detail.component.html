@@ -1,0 +1,25 @@
+<div mat-dialog-content>
+  <p><span translate>detailUserTextTitle</span></p>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label><span translate>detailName</span></mat-label>
+      <input matInput placeholder="" [value]="user.name" disabled/>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label><span translate>detailAge</span></mat-label>
+      <input matInput placeholder="" [value]="user.age" disabled/>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label><span translate>detailSalary</span></mat-label>
+      <input matInput placeholder="" [value]="user.salary" disabled/>
+    </mat-form-field>
+    <!-- <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Leave a comment"></textarea>
+          </mat-form-field> -->
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">
+    <span translate>detailCancel</span>
+  </button>  
+</div>

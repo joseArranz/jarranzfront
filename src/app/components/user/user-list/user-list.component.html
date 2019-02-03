@@ -3,9 +3,8 @@
 </p> -->
 <!-- {{ users | json }} -->
 
-<h1>
-  Users List
-</h1>
+
+<h1 translate>UsersList</h1>
 
 <table mat-table class="mat-elevation-z8" matSort [dataSource]="users">
   <ng-container matColumnDef="select">
@@ -28,24 +27,34 @@
   </ng-container>
 
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><span translate>id</span></th>
     <td mat-cell *matCellDef="let user">{{ user.id }}</td>
   </ng-container>
 
   <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>name</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><span translate>name</span></th>
     <td mat-cell *matCellDef="let user">{{ user.name }}</td>
   </ng-container>
 
   <ng-container matColumnDef="age">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>age</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><span translate>age</span></th>
     <td mat-cell *matCellDef="let user">{{ user.age }}</td>
   </ng-container>
 
   <ng-container matColumnDef="salary">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>salary</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><span translate>salary</span></th>
     <td mat-cell *matCellDef="let user">{{ user.salary }}</td>
   </ng-container>
+
+  <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header><span translate>actions</span></th>
+      <td mat-cell *matCellDef="let user" (click)="$event.stopPropagation()">
+        <button mat-button (click)="onEdit(user.id)" md-raised-button><span translate>btnTableEdit</span></button>
+        <button mat-button (click)="onDelete(user.id)" md-raised-button><span translate>btnTableDelete</span></button>
+        <button mat-button (click)="onDetail(user.id)" md-raised-button><span translate>btnTableDetail</span></button>
+      </td>    
+  </ng-container>
+  
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
 
@@ -60,3 +69,8 @@
   [pageSizeOptions]="[5, 10, 20]"
   showFirstLastButtons
 ></mat-paginator>
+<div class="btnLayer">
+    <button mat-button (click)="onDeleteSelected()" md-raised-button><span translate>btnDeleteSelecteds</span></button>
+    <button mat-button (click)="onCreate()" md-raised-button ><span translate>btnCreateUser</span></button>
+</div>
+

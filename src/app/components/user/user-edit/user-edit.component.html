@@ -1,0 +1,29 @@
+<!-- <h1 mat-dialog-title>Hi {{data.name}}</h1> -->
+<div mat-dialog-content>
+  <p><span translate>editUserTextTitle</span></p>
+  <form class="example-form">    
+    <mat-form-field class="example-full-width">
+        <mat-label><span translate>editName</span></mat-label>
+        <input matInput name="user.name" #name="ngModel" type="text" placeholder=""  [(ngModel)]="user.name" required >      
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label><span translate>editAge</span></mat-label>
+        <input matInput name="user.age" #age="ngModel" type="text" placeholder=""  [(ngModel)]="user.age" required >      
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label><span translate>editSalary</span></mat-label>      
+        <input matInput name="user.salary" #salary="ngModel" type="text" placeholder=""  [(ngModel)]="user.salary" required >      
+      </mat-form-field> 
+    <!-- <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Leave a comment"></textarea>
+          </mat-form-field> -->
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">
+    <span translate>editCancel</span>
+  </button>
+  <button mat-button (click)="onClick()">
+    <span translate>editSave</span>
+  </button>
+</div>

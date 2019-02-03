@@ -7,7 +7,6 @@ import { NavbarComponent } from "./components/common/navbar/navbar.component";
 import { MenuGeneralComponent } from "./components/common/menu-general/menu-general.component";
 import { UserService } from "./service/user.service";
 import { HttpWrapper } from "./service/httpWrapper.service";
-import { HttpClientModule } from "@angular/common/http";
 import { InitComponent } from "./components/common/init/init.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
@@ -17,6 +16,16 @@ import {
   MatSortModule,
   MatTableModule
 } from "@angular/material";
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FormsModule } from '@angular/forms';
+
+
+export function translateHttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +37,15 @@ import {
     /* BrowserModule, */
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: translateHttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [UserService, HttpWrapper],
   bootstrap: [AppComponent]

@@ -1,0 +1,41 @@
+{
+    "Title": "Translation demo",
+    "WelcomeMessage": "Welcome to the international demo application",
+
+    "UsersList":"User List",
+    "id" : "Id",
+    "name" : "Name",
+    "age" : "Age",
+    "salary" : "Salary",
+    "actions":"Actions",
+    "btnTableEdit" : "Edit",
+    "btnTableDelete" : "Delete",
+    "btnTableDetail" : "Detail",
+    "btnCreateUser" : "Create User",
+    "btnDeleteSelecteds" : "Delete Selecteds",
+
+    "createUserTextTitle" : "Create new user",
+    "createName": "Name",
+    "createAge": "Age",
+    "createSalary": "Salary",
+    "createSave": "Save",
+    "createCancel": "Cancel",
+
+    "deleteUserTextTitle": "Confirm delete User",
+    "deleteCancel": "Cancel",
+    "deleteSave": "Delete",
+    
+    "detailUserTextTitle": "Detail User",
+    "detailCancel": "OK",    
+    "detailName": "Name",
+    "detailAge": "Age",
+    "detailSalary": "Salary",
+
+    "editUserTextTitle" : "Edit user",
+    "editName": "Name",
+    "editAge": "Age",
+    "editSalary": "Salary",
+    "editSave": "Save",
+    "editCancel": "Cancel"
+
+}
