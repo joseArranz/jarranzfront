@@ -1,0 +1,72 @@
+npm i -g cordova
+
+
+cmd
+F:\Proyectos\Programacion\Repo\Bit\cordovaAngular
+
+
+cordova create myApp
+cordova add plataform browser
+cordova add plataform android
+
+
+abrir en visual
+ng build --configuration=production
+
+
+-------------------------
+camera
+https://www.youtube.com/watch?v=faj62TgS-8o
+-------------------------
+
+https://www.youtube.com/watch?v=NuOfJj_nYbU
+
+cordova create cordova
+cordova platform add browser
+cordova platform add android
+
+,
+    "cordova": "ng build --base-href . --output-path cordova/www",
+    "cordova-run": "npm run cordova && cd cordova && cordova run browser",
+    "cordova-run-android": "npm run cordova && cd cordova && cordova run android"
+
+
+
+
+Ejemplos
+phone gap
+https://www.youtube.com/watch?v=i95uZkOSRj4
+https://www.youtube.com/watch?v=8rqyN5fX1W4
+
+
+
+GOOGLE PLAY------------------------
+
+
+
+https://www.youtube.com/watch?v=1u5mA9J5FTg
+
+keytool -genkey -v -keystore app-key.keystore -alias app-key -keyalg RSA -keysize 2048 -validity 10000
+home123
+jose arranz
+jose arranz
+jose arranz
+madrid
+madrid
+ES
+si
+pasword key store -->enter
+
+{
+    "android": {
+        "release": {
+            "keystore": "app-key.keystore",
+            "storePassword": "home123",
+            "alias": "app-key",
+            "password": "home123",
+            "keystoreType": ""
+        }
+    }
+}
+
+https://play.google.com/apps/publish/signup/
